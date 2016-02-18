@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -8,6 +9,8 @@ namespace Presentation
 	{
 		public static event System.Action<int> OnSlideActive;
 
+		[SerializeField] private Text _titleText;
+		[SerializeField] private Text _descriptionText;
 		[SerializeField] private PresentationData _data;
 		private List<SlideData> _slides
 		{
@@ -23,7 +26,8 @@ namespace Presentation
 			get { return _currentSlideId; }
 			set { _currentSlideId = Mathf.Clamp(value, 0, SlidesCount - 1); }
 		}
-		[SerializeField] private SlideData _currentSlide;
+		private SlideData _currentSlide = null;
+		private int _descriptionTextCounter = 0;
 
 		private void Start()
 		{
@@ -32,28 +36,60 @@ namespace Presentation
 
 		public void GoForward()
 		{
+			StopAllCoroutines();
 			StartCoroutine(ShowSlide(++CurrentSlideId));
 		}
 
 		public void GoBack()
 		{
+			StopAllCoroutines();
 			StartCoroutine(ShowSlide(--CurrentSlideId));
 		}
 
 		private IEnumerator ShowSlide(int slideId)
 		{
-			if(_currentSlide.Slide!=null)
+			if(_currentSlide!=null)
 			{
 				_currentSlide.Slide.Hide();
+				HideText();
 				yield return new WaitForSeconds(0.15f);
 			}
 			_currentSlideId = slideId;
 			_currentSlide = _slides[_currentSlideId];
 			_currentSlide.Slide.Show();
+			ShowText();
 			if(OnSlideActive!=null)
 			{
 				OnSlideActive(_currentSlideId);
 			}
+		}
+
+		private void ShowText()
+		{
+			_titleText.text = _currentSlide.TitleText;
+			_titleText.SetAlpha(1.0f, 0.1f);
+
+			_descriptionText.text = "";
+			_descriptionText.SetAlpha(1.0f);
+			_descriptionTextCounter = 0;
+			StartCoroutine(ShowDescriptionText());
+		}
+
+		private IEnumerator ShowDescriptionText()
+		{
+			if(_descriptionTextCounter<_currentSlide.DescriptionText.Length)
+			{
+				_descriptionText.text += _currentSlide.DescriptionText[_descriptionTextCounter++];
+
+				yield return new WaitForSeconds(0.03f);
+				StartCoroutine(ShowDescriptionText());
+			}
+		}
+
+		private void HideText()
+		{
+			_titleText.SetAlpha(0.0f, 0.1f);
+			_descriptionText.SetAlpha(0.0f, 0.1f);
 		}
 	}
 }

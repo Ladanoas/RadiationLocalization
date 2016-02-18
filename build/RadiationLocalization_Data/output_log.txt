@@ -1,0 +1,26 @@
+Initialize engine version: 4.6.9f1 (44099fd26189)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7800 Series (ID=0x6819)
+    Vendor:   ATI
+    VRAM:     2029 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.034 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\System.dll (this message is harmless)
+click
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
