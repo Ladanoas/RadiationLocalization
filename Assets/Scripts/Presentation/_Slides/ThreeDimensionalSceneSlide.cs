@@ -6,7 +6,6 @@ namespace Presentation
 	public class ThreeDimensionalSceneSlide : AbstarctPresentationSlide
 	{
 		[SerializeField] private Transform _scene;
-		[SerializeField] private Transform _rotatedObj;
 
 		public override void Show()
 		{
@@ -26,7 +25,7 @@ namespace Presentation
 
 		private void RotateScene(float angleY)
 		{
-			_rotatedObj.Rotate(new Vector3(0.0f, angleY, 0.0f));
+			_scene.Rotate(new Vector3(0.0f, angleY, 0.0f));
 		}
 	}
 }
