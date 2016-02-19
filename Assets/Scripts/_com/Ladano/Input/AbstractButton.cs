@@ -12,7 +12,6 @@ public abstract class AbstractButton : MonoBehaviour
 
 	public void MouseClick()
 	{
-		Debug.Log("click");
 		ButtonClick();
 	}
 	

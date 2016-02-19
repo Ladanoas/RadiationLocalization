@@ -189,5 +189,15 @@ namespace MyEditor
 			}
 		}
 		#endregion
+
+		[MenuItem("Utils/Other/Abs scales")]
+		private static void AbsScales()
+		{
+			foreach(Transform transform in Selection.activeTransform)
+			{
+				transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), Mathf.Abs(transform.localScale.y), Mathf.Abs(transform.localScale.z));
+			}
+		}
+
    }
 }
