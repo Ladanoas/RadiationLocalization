@@ -20,7 +20,3 @@ Loading D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\System.dll (this message is harmless)
-click
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-

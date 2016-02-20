@@ -42,5 +42,24 @@ public static class SpriteRendererExtensions
 			}
 		}
 	}
+
+	public static void SetAlpha(this RawImage image, float alpha, float time = 0.0f, System.Action completeCallback = null)
+	{
+		if(time>0.0f)
+		{
+			LeanTween.value(image.gameObject, image.color.a, alpha, time)
+				.setEase(LeanTweenType.linear)
+				.setOnUpdate( (float value) => { image.color = new Color(image.color.r, image.color.g, image.color.b, value); } )
+				.setOnComplete( () => { if(completeCallback!=null) completeCallback(); } );
+		}
+		else
+		{
+			image.color = new Color(image.color.r, image.color.g, image.color.b, alpha);
+			if(completeCallback!=null)
+			{
+				completeCallback();
+			}
+		}
+	}
 	#endregion
 }
