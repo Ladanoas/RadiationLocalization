@@ -19,12 +19,9 @@ namespace Presentation
 				rect.y += 2;
 				EditorGUI.PropertyField(
 					new Rect(rect.x, rect.y, 60, EditorGUIUtility.singleLineHeight),
-					element.FindPropertyRelative("TitleText"), GUIContent.none);
+					element.FindPropertyRelative("Id"), GUIContent.none);
 				EditorGUI.PropertyField(
-					new Rect(rect.x + 60, rect.y, rect.width - 60 - 100, EditorGUIUtility.singleLineHeight),
-					element.FindPropertyRelative("DescriptionText"), GUIContent.none);
-				EditorGUI.PropertyField(
-					new Rect(rect.x + rect.width - 100, rect.y, 100, EditorGUIUtility.singleLineHeight),
+					new Rect(rect.x + 60, rect.y, rect.width - 60, EditorGUIUtility.singleLineHeight),
 					element.FindPropertyRelative("Slide"), GUIContent.none);
 			};
 		}

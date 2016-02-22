@@ -14,9 +14,10 @@ Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocali
 Loading D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.034 seconds
+- Completed reload, in  0.033 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\System.Core.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
 Platform assembly: D:\Work\Freelance\RadiationLocalization\build\RadiationLocalization_Data\Managed\System.dll (this message is harmless)

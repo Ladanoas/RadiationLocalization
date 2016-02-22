@@ -27,6 +27,7 @@ namespace Presentation
 			set { _currentSlideId = Mathf.Clamp(value, 0, SlidesCount - 1); }
 		}
 		private SlideData _currentSlide = null;
+		private SerializationSlideData _currentSlideData = null;
 		private int _descriptionTextCounter = 0;
 
 		private void Start()
@@ -56,6 +57,7 @@ namespace Presentation
 			}
 			_currentSlideId = slideId;
 			_currentSlide = _slides[_currentSlideId];
+			_currentSlideData = PresentationData.Instance.GetSerializationSlideData(_currentSlide.Id);
 			_currentSlide.Slide.Show();
 			ShowText();
 			if(OnSlideActive!=null)
@@ -66,7 +68,7 @@ namespace Presentation
 
 		private void ShowText()
 		{
-			_titleText.text = _currentSlide.TitleText;
+			_titleText.text = _currentSlideData.SlideTitle;
 			_titleText.SetAlpha(1.0f, 0.1f);
 
 			_descriptionText.text = "";
@@ -77,9 +79,9 @@ namespace Presentation
 
 		private IEnumerator ShowDescriptionText()
 		{
-			if(_descriptionTextCounter<_currentSlide.DescriptionText.Length)
+			if(_descriptionTextCounter<_currentSlideData.SlideDescription.Length)
 			{
-				_descriptionText.text += _currentSlide.DescriptionText[_descriptionTextCounter++];
+				_descriptionText.text += _currentSlideData.SlideDescription[_descriptionTextCounter++];
 
 				yield return new WaitForSeconds(0.03f);
 				StartCoroutine(ShowDescriptionText());
